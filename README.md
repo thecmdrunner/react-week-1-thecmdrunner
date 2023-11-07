@@ -3,7 +3,7 @@
 ### Task Description:
 
 You need to convert your layout assignment to JSX.
-Break down the layout’s code into reusable React components such as Buttons, Header, Footer, Tweet, ProfileCard, etc.
+Break down the layout's code into reusable React components such as Buttons, Header, Footer, Tweet, ProfileCard, etc.
 Ensure that each component is in its own file, and organize these files in a logical folder structure.
 
 ### Checklist:
@@ -21,7 +21,7 @@ Ensure that each component is in its own file, and organize these files in a log
 
 ### Task Description:
 
-Set up state for the Login/Signup page using React’s state management. Ensure that the state updates as the user types.
+Set up state for the Login/Signup page using React's state management. Ensure that the state updates as the user types.
 Implement state for the Home Feed and Profile Page to manage tweets and profile information.
 Employ Context API to manage and pass down global state where necessary.
 
