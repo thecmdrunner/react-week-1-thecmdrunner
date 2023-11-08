@@ -8,9 +8,7 @@ export function cn(...inputs) {
 /**
  * @param {string} givenTimestamp */
 export function getRelativeTimePhrase(givenTimestamp) {
-
   givenTimestamp = Number(givenTimestamp);
-
 
   // Get current timestamp
   const currentTimestamp = new Date().getTime();
@@ -19,7 +17,7 @@ export function getRelativeTimePhrase(givenTimestamp) {
 
   // Guard clause for future posted dates
   if (timeDifference < 0) {
-    return "in the future";
+    return 'in the future';
   }
 
   // Convert time difference to minutes and hours
@@ -31,24 +29,24 @@ export function getRelativeTimePhrase(givenTimestamp) {
 
   // Determine the appropriate relative time phrase
   if (minutesAgo < 1) {
-    return "just now";
+    return 'just now';
   } else if (minutesAgo === 1) {
-    return "1 minute ago";
+    return '1 minute ago';
   } else if (minutesAgo < 60) {
     return `${minutesAgo} minutes ago`;
   } else if (hoursAgo === 1) {
-    return "1 hour ago";
+    return '1 hour ago';
   } else if (hoursAgo < 24) {
     return `${hoursAgo} hours ago`;
   } else if (daysAgo === 1) {
-    return "1 day ago";
+    return '1 day ago';
   } else if (daysAgo < 7) {
     return `${daysAgo} days ago`;
   } else {
     // Format the posted date for times over a week ago
     const postedDate = new Date(givenTimestamp);
     const day = postedDate.getDate();
-    const month = postedDate.toLocaleString("default", { month: "short" });
+    const month = postedDate.toLocaleString('default', { month: 'short' });
     const year = postedDate.getFullYear();
 
     return `${day} ${month} ${year}`;

@@ -23,7 +23,7 @@ const defaultTweets = [
     id: '0987654321',
     name: 'Pranav ⚡',
     username: 'thecmdrunner',
-    postedAt: '1699379318868',
+    postedAt: '1699279318868',
     tweetText: 'Why are you using twitter?',
     comments: 0,
     retweets: 0,
