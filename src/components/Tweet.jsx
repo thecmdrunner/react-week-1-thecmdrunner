@@ -90,7 +90,7 @@ function Tweet({
               setUserTweets(tweets);
             }}
             className={cn(
-              isRetweeted ? 'text-[#00BE74]' : 'text-neutral-500',
+              isRetweeted ? 'text-success' : 'text-neutral-500',
               'flex items-center justify-between gap-[0.3rem]',
             )}
           >
