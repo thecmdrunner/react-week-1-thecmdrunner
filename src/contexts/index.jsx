@@ -20,7 +20,7 @@ TweetsStoreProvider.propTypes = {
 
 const defaultTweets = [
   {
-    id: '1234567890',
+    id: '0987654321',
     name: 'Pranav ⚡',
     username: 'thecmdrunner',
     postedAt: '1699379318868',
