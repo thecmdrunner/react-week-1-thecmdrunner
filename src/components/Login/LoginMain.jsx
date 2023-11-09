@@ -1,10 +1,31 @@
 import Button from '@/components/Button';
+import { useNavigate } from "react-router-dom";
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import { URLs } from '@/constants.js';
 import { Link } from 'react-router-dom';
 
 function TweetMain() {
+  const navigate = useNavigate();
+
+  const handleLogin = async () => {
+    const res = await fetch(API_URL + `/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: "batman@example.com",
+        password: "gothamrocks",
+      }),
+    });
+    if (!res.ok) {
+      return alert(`Error: ${res.statusText}`)
+    }
+    console.log(await res.json());
+    navigate(URLs.feed);
+  };
+
   return (
     <main className="bg-neutral-1000 flex w-full flex-grow items-center justify-center">
       <section className="flex w-full flex-col gap-10 px-7">
@@ -26,11 +47,15 @@ function TweetMain() {
         </div>
         <section className="flex flex-col gap-5">
           <Text text="Already have an account?" />
-          <Link to={URLs.feed}>
-            <Button variant="outline" type="primary" size="full">
+          
+          <Button
+            onClick={() => handleLogin()}
+            variant="outline"
+            type="primary"
+            size="full"
+           >
               Sign in
-            </Button>
-          </Link>
+          </Button>
         </section>
       </section>
     </main>
