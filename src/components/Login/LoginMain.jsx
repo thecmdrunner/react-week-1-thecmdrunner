@@ -5,6 +5,8 @@ import Text from '@/components/Text';
 import { URLs } from '@/constants.js';
 import { Link } from 'react-router-dom';
 
+const API_URL = `https://one00x-react-backend.onrender.com`
+
 function TweetMain() {
   const navigate = useNavigate();
 
